@@ -52,6 +52,7 @@ Please update pgf to version 2.10 minimum!\MessageBreak
 \def\RTNullWindowHeight{0} % nullwindow height
 \def\RTTaskLabelSize{\normalsize}   % font size the task label
 \def\RTNumberLabelSize{\normalsize} % font size of the number labels
+\def\RTLockLabelSize{\normalsize} % font size of the lock labels
 \def\RTDefTaskSymbol{\tau} 
 \def\RTDefNumberOffset{0}
 \def\RTDefTaskFill{solid}
@@ -425,7 +426,7 @@ Please update pgf to version 2.10 minimum!\MessageBreak
   \@compute@xx{#3}
   \yyy = \yy \advance \yyy by \sy
   \advance \yyy by .5\sy
-  \node[font=\rtfont] at (\xx , \yyy) {\RTNumberLabelSize L(#4)}; %\RTNumberLabelSize
+  \node[font=\rtfont] at (\xx , \yyy) {\RTLockLabelSize L(#4)}; %\RTLockLabelSize
   \@RTExecDefaultValues
 }
 %
@@ -440,7 +441,7 @@ Please update pgf to version 2.10 minimum!\MessageBreak
   \@compute@xx{#3}
   \yyy = \yy \advance \yyy by \sy
   \advance \yyy by .5\sy
-  \node[font=\rtfont] at (\xx , \yyy) {\RTNumberLabelSize U(#4)}; %\RTNumberLabelSize
+  \node[font=\rtfont] at (\xx , \yyy) {\RTLockLabelSize U(#4)}; %\RTLockLabelSize
   \@RTExecDefaultValues
 }
 %
